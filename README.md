@@ -1,9 +1,12 @@
 # Srslog Hooks for Logrus <img src="http://i.imgur.com/hTeVwmJ.png" width="40" height="40" alt=":walrus:" class="emoji" title=":walrus:"/>
 
+[![GoDoc](https://godoc.org/github.com/grutz/logrus_srslog?status.svg)](https://godoc.org/github.com/grutz/logrus_srslog)
+
 Near drop-in replacement for the `logrus_syslog` hook to utilize `sysrlog` instead of built-in `log/syslog`.
 
 Why?
-1. `log/syslog` does not compile for most operating systems
+
+1. `log/syslog` does not compile for most operating systems (i.e. Windows)
 2. `sysrlog` support TCP+TLS (but not client-certificate)
 3. No need for complexity to just deliver log entries
 

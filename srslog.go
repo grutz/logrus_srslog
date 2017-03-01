@@ -14,7 +14,7 @@ type SrslogHook struct {
 	SyslogRaddr   string
 }
 
-// Creates a hook to be added to an instance of logger. This is called with
+// NewSrslogHook creates a hook to be added to an instance of logger. This is called with
 // `hook, err := NewSrslogHook("udp", "localhost:514", syslog.LOG_DEBUG, "", "")`
 // `if err == nil { log.Hooks.Add(hook) }`
 func NewSrslogHook(network, raddr string, priority syslog.Priority, tag string, cert string) (*SrslogHook, error) {
@@ -32,6 +32,7 @@ func NewSrslogHook(network, raddr string, priority syslog.Priority, tag string, 
 	return &SrslogHook{w, network, raddr}, err
 }
 
+// Fire called when Logrus has log entries to send
 func (hook *SrslogHook) Fire(entry *logrus.Entry) error {
 	line, err := entry.String()
 	if err != nil {
@@ -57,6 +58,7 @@ func (hook *SrslogHook) Fire(entry *logrus.Entry) error {
 	}
 }
 
+// Levels returns all levels as supported by Srslog
 func (hook *SrslogHook) Levels() []logrus.Level {
 	return logrus.AllLevels
 }
