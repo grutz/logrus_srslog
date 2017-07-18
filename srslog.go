@@ -3,7 +3,7 @@ package logrus_srslog
 import (
 	"fmt"
 	syslog "github.com/RackSec/srslog"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"os"
 )
 
