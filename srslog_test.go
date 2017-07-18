@@ -2,7 +2,7 @@ package logrus_srslog
 
 import (
 	syslog "github.com/RackSec/srslog"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"testing"
 )
 
