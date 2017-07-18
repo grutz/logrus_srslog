@@ -15,7 +15,7 @@ Why?
 ```go
 import (
     syslog "github.com/RackSec/srslog"
-    "github.com/Sirupsen/logrus"
+    "github.com/sirupsen/logrus"
     logrus_srslog "github.com/grutz/logrus_srslog"
 )
 
@@ -34,7 +34,7 @@ When using TCP+TLS, include the certificate file:
 ```go
 import (
     syslog "github.com/RackSec/srslog"
-    "github.com/Sirupsen/logrus"
+    "github.com/sirupsen/logrus"
     logrus_srslog "github.com/grutz/logrus_srslog"
 )
 
